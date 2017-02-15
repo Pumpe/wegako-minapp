@@ -1,0 +1,1039 @@
+<!--example/trucks/paylist.wxml-->
+<view class="page">
+    <view class="fullbg {{isfull ?'fullopacity':''}}" bindtap="hidebg"></view>
+    <view class="fix_top">
+        <view class="page__bd_spacing profile_nav" style="position:relative;z-index:1;" bindtap="listpay" data-nav="1">
+            <view class="weui-flex p100" style="line-height:3em;">
+                <view class="weui-flex__item">缴费类别</view>
+                <view class="weui-flex gray">挂靠管理费<view class="weui-nav-select" style="padding-right:20px;"></view></view>
+            </view>
+        </view>
+        <view class="weui-flex__item gray_bg {{payopen ? 'slidown' : 'slidup'}}">
+            <view class="weui-cell">挂靠管理费</view>
+            <view class="weui-cell">车辆保费</view>
+            <view class="weui-cell">车辆贷款</view>
+            <view class="weui-cell">行驶证代办费</view>
+            <view class="weui-cell">营运证代办费</view>
+            <view class="weui-cell">二维代办费</view>
+            <view class="weui-cell">GPS管理费</view>
+        </view>
+    </view>
+    <view class="page__bd_spacing" style="margin-top:4em;">
+            <view class="insurance_cell">
+                <!--挂靠管理费-->
+                <view class="weui-flex" style="margin-left:-25px;">
+                    <view class="blue_dot dot-shw"></view>
+                    <view class="weui-flex__item l15">2016年</view>
+                </view>
+                <navigator class="kind-list__item l15" url="payinfo">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">待缴费</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">最迟缴费日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator class="kind-list__item l15" url="payinfo">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">已逾期</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">最迟缴费日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                </navigator>
+                <view class="weui-flex" style="margin-left:-25px;">
+                    <view class="blue_dot dot-shw"></view>
+                    <view class="weui-flex__item l15">2015年</view>
+                </view>
+                <navigator class="kind-list__item l15" url="payinfo1">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="green">已缴费</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">有效期</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-03-18 至 2017-03-17</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费时间</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20 15:27:45</view>
+                        </view>
+                    </view>
+                </navigator>
+                <!--车辆保费-->
+                <view class="weui-flex" style="margin-left:-25px;">
+                    <view class="blue_dot dot-shw"></view>
+                    <view class="weui-flex__item l15">2016年</view>
+                </view>
+                <navigator class="kind-list__item l15" url="payinfo_xubao">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">待续保</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">保险公司</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">平安保险公司</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">投保险种</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">交强险、车损险、第三者</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">保单金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">保险到期日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator class="kind-list__item l15" url="payinfo_xubao1">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">已逾期</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">保单金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">保险公司</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">平安保险公司</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">投保险种</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">交强险、车损险、第三者</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">最迟缴费日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator class="kind-list__item l15" url="payinfo_xubao1">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">待缴费</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">保单金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">保险公司</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">平安保险公司</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">投保险种</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">交强险、车损险、第三者</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">最迟缴费日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator class="kind-list__item l15" url="payinfo_xubao2">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="green">已缴费，待投保</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">保险公司</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">平安保险公司</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">投保险种</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">交强险、车损险、第三者</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">保单金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">保险到期日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费时间</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20 15:27:45</view>
+                        </view>
+                    </view>
+                </navigator>
+                <view class="weui-flex" style="margin-left:-25px;">
+                    <view class="blue_dot dot-shw"></view>
+                    <view class="weui-flex__item l15">2015年</view>
+                </view>
+                <navigator class="kind-list__item l15" url="payinfo_xubao3">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="green">完成投保</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">保险公司</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">平安保险公司</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">投保险种</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">交强险、车损险、第三者</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">保单金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">保险到期日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费时间</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20 15:27:45</view>
+                        </view>
+                    </view>
+                </navigator>
+                <!--车辆贷款-->
+                <view class="weui-flex" style="margin-left:-25px;">
+                    <view class="blue_dot dot-shw"></view>
+                    <view class="weui-flex__item l15">2016年</view>
+                </view>
+                <navigator class="kind-list__item l15" url="payinfo_chedai">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">待还款</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">还款金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">12000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">本次还贷期</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">第10期</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">最迟还款日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator class="kind-list__item l15" url="payinfo_chedai">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">已逾期</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">还款金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">12000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">本次还贷期</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">第10期</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">最迟还款日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                </navigator>
+                <view class="weui-flex" style="margin-left:-25px;">
+                    <view class="blue_dot dot-shw"></view>
+                    <view class="weui-flex__item l15">2015年</view>
+                </view>
+                <navigator class="kind-list__item l15" url="payinfo_chedai1">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="green">已还款</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">还款金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">12000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">本次还贷期</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">第10期</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">下次还款日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">本次还款时间</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20 15:27:45</view>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator class="kind-list__item l15" url="payinfo_chedai1">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="green">还款完结</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">还款金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">12000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">本次还贷期</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">第18期</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">本次还款时间</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20 15:27:45</view>
+                        </view>
+                    </view>
+                    <view class="loan_end"><image src="../images/icon_loan_end.png" style="width:60px;height:60px;"></image></view>
+                </navigator>
+                <!--行驶证代办费-->
+                <view class="weui-flex" style="margin-left:-25px;">
+                    <view class="blue_dot dot-shw"></view>
+                    <view class="weui-flex__item l15">2016年</view>
+                </view>
+                <navigator class="kind-list__item l15" url="payinfo_xingshi">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">待缴费</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">行驶证到期日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">最迟缴费日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator class="kind-list__item l15" url="payinfo_xingshi">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">已逾期</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">行驶证到期日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">最迟缴费日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator class="kind-list__item l15" url="payinfo_xingshi1">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="green">已缴费，待审验</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">行驶证到期日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费时间</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20 15:27:45</view>
+                        </view>
+                    </view>
+                </navigator>
+                <view class="weui-flex" style="margin-left:-25px;">
+                    <view class="blue_dot dot-shw"></view>
+                    <view class="weui-flex__item l15">2015年</view>
+                </view>
+                <navigator class="kind-list__item l15" url="payinfo_xingshi2">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="green">完成审验</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">行驶证到期日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费时间</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20 15:27:45</view>
+                        </view>
+                    </view>
+                </navigator>
+                <!--营运证代办费-->
+                <view class="weui-flex" style="margin-left:-25px;">
+                    <view class="blue_dot dot-shw"></view>
+                    <view class="weui-flex__item l15">2016年</view>
+                </view>
+                <navigator class="kind-list__item l15" url="payinfo_yingyun">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">待缴费</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">营运证到期日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">最迟缴费日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator class="kind-list__item l15" url="payinfo_yingyun">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">已逾期</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">营运证到期日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">最迟缴费日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator class="kind-list__item l15" url="payinfo_yingyun1">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="green">已缴费，待审验</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">营运证到期日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费时间</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20 15:27:45</view>
+                        </view>
+                    </view>
+                </navigator>
+                <view class="weui-flex" style="margin-left:-25px;">
+                    <view class="blue_dot dot-shw"></view>
+                    <view class="weui-flex__item l15">2015年</view>
+                </view>
+                <navigator class="kind-list__item l15" url="payinfo_yingyun2">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="green">完成审验</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">营运证到期日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费时间</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20 15:27:45</view>
+                        </view>
+                    </view>
+                </navigator>
+                <!--二维代办费-->
+                <view class="weui-flex" style="margin-left:-25px;">
+                    <view class="blue_dot dot-shw"></view>
+                    <view class="weui-flex__item l15">2016年</view>
+                </view>
+                <navigator class="kind-list__item l15" url="payinfo_erwei">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">待缴费</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">二维到期日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">最迟缴费日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator class="kind-list__item l15" url="payinfo_erwei">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">已逾期</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">二维到期日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">最迟缴费日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator class="kind-list__item l15" url="payinfo_erwei1">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="green">已缴费，待审验</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">二维到期日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费时间</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20 15:27:45</view>
+                        </view>
+                    </view>
+                </navigator>
+                <view class="weui-flex" style="margin-left:-25px;">
+                    <view class="blue_dot dot-shw"></view>
+                    <view class="weui-flex__item l15">2015年</view>
+                </view>
+                <navigator class="kind-list__item l15" url="payinfo_erwei2">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="green">完成审验</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">二维到期日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费时间</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20 15:27:45</view>
+                        </view>
+                    </view>
+                </navigator>
+                <!--GPS管理费-->
+                <view class="weui-flex" style="margin-left:-25px;">
+                    <view class="blue_dot dot-shw"></view>
+                    <view class="weui-flex__item l15">2016年</view>
+                </view>
+                <navigator class="kind-list__item l15" url="payinfo_gps">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">待缴费</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">最迟缴费日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator class="kind-list__item l15" url="payinfo_gps">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">已逾期</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">最迟缴费日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20</view>
+                        </view>
+                    </view>
+                </navigator>
+                <view class="weui-flex" style="margin-left:-25px;">
+                    <view class="blue_dot dot-shw"></view>
+                    <view class="weui-flex__item l15">2015年</view>
+                </view>
+                <navigator class="kind-list__item l15" url="payinfo_gps1">
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="green">已缴费</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费金额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">有效期</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-03-18 至 2017-03-17</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">缴费时间</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">2016-04-20 15:27:45</view>
+                        </view>
+                    </view>
+                </navigator>
+            </view>
+    </view>
+</view>

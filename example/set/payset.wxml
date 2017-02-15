@@ -1,0 +1,204 @@
+<!--example/set/payset.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-post b12">
+            <view class="weui-cell">
+                <view class="weui-flex__item h1">挂靠管理费</view>
+                <view><switch checked /></view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">缴费周期</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input placeholder="12" class="c"/>
+                </view>
+                <view class="gray">月/次</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">自动提醒</view>
+                </view>
+                <view class="weui-flex gray">
+                    <view>提前</view>
+                    <view class="weui-flex__item"><input placeholder="30" class="c"/></view>
+                    <view>天通知车主</view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-post b12">
+            <view class="weui-cell">
+                <view class="weui-flex__item h1">车辆保险</view>
+                <view><switch checked /></view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">缴费周期</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input placeholder="12" class="c"/>
+                </view>
+                <view class="gray">月/次</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">自动提醒</view>
+                </view>
+                <view class="weui-flex gray">
+                    <view>提前</view>
+                    <view class="weui-flex__item"><input placeholder="30" class="c"/></view>
+                    <view>天通知车主</view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-post b12">
+            <view class="weui-cell">
+                <view class="weui-flex__item h1">车辆贷款</view>
+                <view><switch checked /></view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">自动提醒</view>
+                </view>
+                <view class="weui-flex gray">
+                    <view>提前</view>
+                    <view class="weui-flex__item"><input placeholder="30" class="c"/></view>
+                    <view>天通知车主</view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-post b12">
+            <view class="weui-cell">
+                <view class="weui-flex__item h1">行驶证代办费</view>
+                <view><switch checked /></view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">缴费周期</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input placeholder="12" class="c"/>
+                </view>
+                <view class="gray">月/次</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">最迟缴费日</view>
+                </view>
+                <view class="weui-flex gray">
+                    <view>行驶证到期日前</view>
+                    <view class="weui-flex__item"><input placeholder="5" class="c"/></view>
+                    <view>天</view>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">自动提醒</view>
+                </view>
+                <view class="weui-flex gray">
+                    <view>提前</view>
+                    <view class="weui-flex__item"><input placeholder="30" class="c"/></view>
+                    <view>天通知车主</view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-post b12">
+            <view class="weui-cell">
+                <view class="weui-flex__item h1">营运证代办费</view>
+                <view><switch checked /></view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">缴费周期</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input placeholder="12" class="c"/>
+                </view>
+                <view class="gray">月/次</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">最迟缴费日</view>
+                </view>
+                <view class="weui-flex gray">
+                    <view>营运证到期日前</view>
+                    <view class="weui-flex__item"><input placeholder="5" class="c"/></view>
+                    <view>天</view>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">自动提醒</view>
+                </view>
+                <view class="weui-flex gray">
+                    <view>提前</view>
+                    <view class="weui-flex__item"><input placeholder="30" class="c"/></view>
+                    <view>天通知车主</view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-post b12">
+            <view class="weui-cell">
+                <view class="weui-flex__item h1">二维代办费</view>
+                <view><switch checked /></view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">缴费周期</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input placeholder="6" class="c"/>
+                </view>
+                <view class="gray">月/次</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">最迟缴费日</view>
+                </view>
+                <view class="weui-flex gray">
+                    <view>二维到期日前</view>
+                    <view class="weui-flex__item"><input placeholder="5" class="c"/></view>
+                    <view>天</view>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">自动提醒</view>
+                </view>
+                <view class="weui-flex gray">
+                    <view>提前</view>
+                    <view class="weui-flex__item"><input placeholder="30" class="c"/></view>
+                    <view>天通知车主</view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-post b12">
+            <view class="weui-cell">
+                <view class="weui-flex__item h1">GPS管理费</view>
+                <view><switch checked /></view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">缴费周期</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input placeholder="12" class="c"/>
+                </view>
+                <view class="gray">月/次</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">自动提醒</view>
+                </view>
+                <view class="weui-flex gray">
+                    <view>提前</view>
+                    <view class="weui-flex__item"><input placeholder="30" class="c"/></view>
+                    <view>天通知车主</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="weui-footer_fixed-bottom weui-footer">
+        <navigator url="" class="weui-cell_access">保存</navigator>
+    </view>
+</view>

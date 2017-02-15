@@ -1,0 +1,26 @@
+<!--example/claims/transfer.wxml-->
+<view class="page">
+    <navigator class="p100 c t12 b12" url="../address/profile">
+        <view class="profile_head">
+            <image src="../images/icon_dp.png"></image>
+        </view>
+        <view>黄蒙</view>
+        <view class="f12 gray">沪G76788</view>
+    </navigator>
+    <view class="weui-post">
+        <view class="weui-cell col">
+            <view class="p100 b12">转发实际理赔款</view>
+            <view class="weui-flex">
+                <view class="h1 r15 t12">￥</view>
+                <view class="weui-flex__item"><input class="amount-input" placeholder="2000"/></view>
+            </view>
+        </view>
+        <view class="weui-cell">
+            <view class="weui-check__hd_in-checkbox">
+                <icon class="weui-icon-checkbox_success" type="success" size="16"></icon>
+            </view>
+            <view class="weui-flex__item">微信支付</view>
+        </view>
+    </view>
+    <navigator class="page__bd page__bd_spacing" url="result"><button class="weui-btn" type="primary">转账</button></navigator>
+</view>

@@ -1,0 +1,17 @@
+<!--example/set/interest.wxml-->
+<view class="page">
+    <view class="weui-post t12">
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <view class="weui-label">逾期按日利率</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input placeholder="1" class="c"/>
+            </view>
+            <view class="gray">%收取利息</view>
+        </view>
+    </view>
+    <view class="weui-footer_fixed-bottom weui-footer">
+        <navigator url="" class="weui-cell_access">保存</navigator>
+    </view>
+</view>

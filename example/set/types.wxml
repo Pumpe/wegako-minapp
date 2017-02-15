@@ -1,0 +1,23 @@
+<!--example/set/types.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-post">
+            <view class="weui-cell">交强险</view>
+            <view class="weui-cell">车损险</view>
+            <view class="weui-cell">第三者责任险</view>
+            <view class="weui-cell">盗抢险</view>
+            <view class="weui-cell">车上人员责任险</view>
+            <view class="weui-cell">车身划痕险</view>
+            <view class="weui-cell">不计免赔</view>
+            <view class="weui-cell">玻璃单独破碎险</view>
+            <view class="weui-cell">自燃险</view>
+            <view class="weui-cell" bindtap="open">
+                <view class="weui-flex__item">发动机特别损失险</view>
+                <view><image src="../images/more.png" class="more"></image></view>
+            </view>
+        </view>
+    </view>
+    <view class="weui-footer_fixed-bottom weui-footer">
+        <navigator url="addtype" class="weui-cell_access">+添加险种</navigator>
+    </view>
+</view>

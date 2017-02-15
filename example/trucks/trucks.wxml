@@ -1,0 +1,248 @@
+<!--example/truck/truck.wxml-->
+<view class="page">
+    <view class="fullbg {{isfull ?'fullopacity':''}}" bindtap="hidebg"></view>
+    <view class="fix_top">
+        <view class="weui-flex profile_nav p100" style="position:relative;z-index:1;">
+            <view class="weui-flex__item weui-nav-slide">
+                <view class="profile_nav_item {{shownavindex == 1? 'weui-nav-active' : 'weui-nav-select'}}" bindtap="listone" data-nav="1">排序</view>
+            </view>
+            <view class="weui-flex__item weui-nav-slide">
+                <view class="profile_nav_item {{shownavindex == 2? 'weui-nav-active' : 'weui-nav-select'}}" bindtap="listtwo" data-nav="2">挂靠公司</view>
+            </view>
+            <view class="weui-flex__item">
+                <view class="profile_nav_item {{shownavindex == 3? 'weui-nav-active' : 'weui-nav-select'}}" bindtap="listthree" data-nav="3">状态</view>
+            </view>
+        </view>
+        <view class="weui-flex__item gray_bg {{oneopen ? 'slidown' : 'slidup'}}">
+            <view class="weui-cell" wx:for="{{content}}">
+                <view class="weui-cell__bd">{{item}}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{checked}}">
+                    <icon class="weui-icon-radio" type="success_no_circle" size="10"></icon>
+                </view>
+            </view>
+        </view>
+        <view class="weui-flex__item gray_bg {{twoopen ? 'slidown' : 'slidup'}}">
+            <view class="weui-cell" wx:for="{{content}}">
+                <view class="weui-cell__bd">{{item}}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{checked}}">
+                    <icon class="weui-icon-radio" type="success_no_circle" size="10"></icon>
+                </view>
+            </view>
+        </view>
+        <view class="weui-flex__item gray_bg {{threeopen ? 'slidown' : 'slidup'}}">
+            <view class="weui-cell" wx:for="{{content}}">
+                <view class="weui-cell__bd">{{item}}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{checked}}">
+                    <icon class="weui-icon-radio" type="success_no_circle" size="10"></icon>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="page__bd" style="margin-top:2em;">
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="请输入车牌号搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">请输入车牌号搜索</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+        <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+        </view>
+
+        <navigator class="weui-post b12" url="archives">
+            <view class="weui-flex">
+                <view style="padding:13px 0 0 12px;">
+                    <image src="../images/pic_160.png" style="width:6em;height:6em"></image>
+                </view>
+                <view class="weui-flex__item">
+                    <view class="weui-cell" style="padding:5px 15px;">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">车牌号</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">沪DD43890</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell" style="padding:5px 15px;">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray green">正常运营</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell" style="padding:5px 15px;">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">挂靠公司</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">上海发财运输公司</view>
+                        </view>
+                    </view>
+                </view>
+            </view>            
+        </navigator>
+        <navigator class="weui-post b12" url="archives">
+            <view class="weui-flex">
+                <view style="padding:13px 0 0 12px;">
+                    <image src="../images/pic_160.png" style="width:6em;height:6em"></image>
+                </view>
+                <view class="weui-flex__item">
+                    <view class="weui-cell" style="padding:5px 15px;">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">车牌号</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">沪DD43890</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell" style="padding:5px 15px;">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">已报废</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell" style="padding:5px 15px;">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">挂靠公司</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">上海发财运输公司</view>
+                        </view>
+                    </view>
+                </view>
+            </view>            
+        </navigator>
+        <navigator class="weui-post b12" url="archives">
+            <view class="weui-flex">
+                <view style="padding:13px 0 0 12px;">
+                    <image src="../images/pic_160.png" style="width:6em;height:6em"></image>
+                </view>
+                <view class="weui-flex__item">
+                    <view class="weui-cell" style="padding:5px 15px;">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">车牌号</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">沪DD43890</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell" style="padding:5px 15px;">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">已报停</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell" style="padding:5px 15px;">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">挂靠公司</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">上海发财运输公司</view>
+                        </view>
+                    </view>
+                </view>
+            </view>            
+        </navigator>
+        <navigator class="weui-post b12" url="archives">
+            <view class="weui-flex">
+                <view style="padding:13px 0 0 12px;">
+                    <image src="../images/pic_160.png" style="width:6em;height:6em"></image>
+                </view>
+                <view class="weui-flex__item">
+                    <view class="weui-cell" style="padding:5px 15px;">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">车牌号</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">沪DD43890</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell" style="padding:5px 15px;">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">已转出</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell" style="padding:5px 15px;">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">挂靠公司</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">上海发财运输公司</view>
+                        </view>
+                    </view>
+                </view>
+            </view>            
+        </navigator>
+        <navigator class="weui-post b12" url="archives">
+            <view class="weui-flex">
+                <view style="padding:13px 0 0 12px;">
+                    <image src="../images/pic_160.png" style="width:6em;height:6em"></image>
+                </view>
+                <view class="weui-flex__item">
+                    <view class="weui-cell" style="padding:5px 15px;">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">车牌号</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">沪DD43890</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell" style="padding:5px 15px;">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">状态</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="red">已过户</view>
+                        </view>
+                    </view>
+                    <view class="weui-cell" style="padding:5px 15px;">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">挂靠公司</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray">上海发财运输公司</view>
+                        </view>
+                    </view>
+                </view>
+            </view>            
+        </navigator>
+        <view class="c t12">共2678辆车</view>
+    </view>
+</view>

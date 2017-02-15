@@ -1,0 +1,30 @@
+<!--example/finance/result.wxml-->
+<view class="page">
+    <view class="c">
+        <view class="weui-cell">
+            <view class="p100 t12 b12">
+                <view><icon type="waiting" size="60"></icon></view>
+                <view class="h1 t12">提现申请已提交</view>
+            </view>
+        </view>
+    </view>
+    <view class="weui-post">
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <view class="weui-label gray">到账银行卡</view>
+            </view>
+            <view class="weui-cell__bd">
+                <view>招商银行行（6767）</view>
+            </view>
+        </view>
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <view class="weui-label gray">提现金额</view>
+            </view>
+            <view class="weui-cell__bd">
+                <view>27,800元</view>
+            </view>
+        </view>
+    </view>
+    <navigator class="page__bd page__bd_spacing" url="finance"><button class="weui-btn" type="primary">完成</button></navigator>
+</view>

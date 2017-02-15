@@ -1,0 +1,101 @@
+<view class="page">
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="请输入车主姓名或车牌号搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">请输入车主姓名或车牌号搜索</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+        <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+        </view>
+        <view class="l15">A</view>
+        <view class="weui-post">
+            <navigator url="profile" class="weui-cell">
+                <view class="weui-flex__item"><image src="../images/icon_dp.png" class="info_dp"></image></view>
+                <view class="weui-cell__ft_in-access r15">
+                    <view>王小虎</view><view class="f12 gray">沪B78899、沪B78899</view>
+                </view>
+            </navigator>
+            <navigator url="profile" class="weui-cell">
+                <view class="weui-flex__item"><image src="../images/icon_dp.png" class="info_dp"></image></view>
+                <view class="weui-cell__ft_in-access r15">
+                    <view>王小虎</view><view class="f12 gray">沪B78899</view>
+                </view>
+            </navigator>
+        </view>
+        <view class="l15">B</view>
+        <view class="weui-post">
+            <navigator url="profile" class="weui-cell">
+                <view class="weui-flex__item"><image src="../images/icon_dp.png" class="info_dp"></image></view>
+                <view class="weui-cell__ft_in-access r15">
+                    <view>王小虎</view><view class="f12 gray">沪B78899、沪B78899</view>
+                </view>
+            </navigator>
+        </view>
+    <view class="page__bd c">共2678位车主</view>
+    <view class="weui-footer_fixed-bottom weui-footer">
+        <navigator url="../invite/invite" class="weui-cell_access">
+            <view>
+                <image src="../images/icon_invite.png" style="margin-right:8px;vertical-align: middle;width:20px; height: 20px;"></image>邀请司机加入
+            </view>
+        </navigator>
+    </view>
+</view>
+<view class="address_nav" style="top: {{navtop}}px;" bindload="navLoad">
+    <navigator url="">A</navigator>
+    <navigator url="">B</navigator>
+    <navigator url="">C</navigator>
+    <navigator url="">D</navigator>
+    <navigator url="">E</navigator>
+    <navigator url="">F</navigator>
+    <navigator url="">G</navigator>
+    <navigator url="">H</navigator>
+    <navigator url="">I</navigator>
+    <navigator url="">J</navigator>
+    <navigator url="">K</navigator>
+    <navigator url="">L</navigator>
+    <navigator url="">M</navigator>
+    <navigator url="">N</navigator>
+    <navigator url="">O</navigator>
+    <navigator url="">P</navigator>
+    <navigator url="">Q</navigator>
+    <navigator url="">R</navigator>
+    <navigator url="">S</navigator>
+    <navigator url="">T</navigator>
+    <navigator url="">U</navigator>
+    <navigator url="">V</navigator>
+    <navigator url="">W</navigator>
+    <navigator url="">X</navigator>
+    <navigator url="">Y</navigator> 
+    <navigator url="">Z</navigator>
+    <navigator url="">#</navigator>
+</view>

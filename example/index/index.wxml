@@ -1,0 +1,134 @@
+<view class="page">
+    <view class="weui-toptips weui-flex">
+        <view class="weui-flex__item">请至电脑端（kg.360che.com）上传车主、车辆档案！</view>
+        <navigator class="r15" style="padding-top:3px;"><image src="../images/icon_close.png" style="width:18px;height:18px;"></image></navigator>
+    </view>
+    <view class="profile_nav" style="margin-top:2.4em;">
+        <navigator url="info/info" class="weui-cell">
+            <view class="weui-flex weui-cell__ft_in-access">
+                <image class="kind-list__img" src="../images/icon_nav_xx.png"></image>
+                <view class="weui-flex__item" style="flex-direction:column;">
+                    <view>消息</view><view class="page__desc">车主加入、缴费成功等系统消息</view>
+                </view>
+                <view class="weui-badge">8</view>
+            </view>
+        </navigator>
+        <navigator url="notice/notice" class="weui-cell">
+            <view class="weui-flex weui-cell__ft_in-access">
+                <image class="kind-list__img" src="../images/icon_nav_gg.png"></image>
+                <view class="weui-flex__item" style="flex-direction:column;">
+                    <view>公告</view><view class="page__desc">对车主发通知公告</view>
+                </view>
+                <view class="f12 blue">发布</view>
+            </view>
+        </navigator>
+        <navigator url="invite/invite" class="weui-cell">
+            <view class="weui-flex weui-cell__ft_in-access">
+                <image class="kind-list__img" src="../images/icon_nav_yq.png"></image>
+                <view class="weui-flex__item" style="flex-direction:column;">
+                    <view>邀请车主加入</view><view class="page__desc">邀请挂靠车主加入系统</view>
+                </view>
+                <view><image src="../images/icon_code_l.png" style="width:1.2em;height:1.2em;"></image></view>
+            </view>
+        </navigator>
+        <navigator url="address/address" class="weui-cell">
+            <view class="weui-flex weui-cell__ft_in-access">
+                <image class="kind-list__img" src="../images/icon_nav_tx.png"></image>
+                <view class="weui-flex__item" style="flex-direction:column;">
+                    <view>车主通讯录</view><view class="page__desc">车主信息、车辆、活动轨迹等</view>
+                </view>
+                <view class="f12 gray">1250人</view>
+            </view>
+        </navigator>
+        <navigator url="trucks/trucks" class="weui-cell">
+            <view class="weui-flex weui-cell__ft_in-access">
+                <image class="kind-list__img" src="../images/icon_nav_da.png"></image>
+                <view class="weui-flex__item" style="flex-direction:column;">
+                    <view>车辆档案管理</view><view class="page__desc">车辆档案、贷款、保险等信息</view>
+                </view>
+                <view class="f12 gray">2500辆</view>
+            </view>
+        </navigator>
+        <navigator url="claims/claims" class="weui-cell">
+            <view class="weui-flex weui-cell__ft_in-access">
+                <image class="kind-list__img" src="../images/icon_nav_cx.png"></image>
+                <view class="weui-flex__item" style="flex-direction:column;">
+                    <view>出险管理</view><view class="page__desc">出险记录管理、查询</view>
+                </view>
+                <view class="weui-badge">8</view>
+            </view>
+        </navigator>
+        <navigator url="guakao/guakao" class="weui-cell">
+            <view class="weui-flex weui-cell__ft_in-access">
+                <image class="kind-list__img" src="../images/icon_nav_gk.png"></image>
+                <view class="weui-flex__item" style="flex-direction:column;">
+                    <view>挂靠缴费管理</view><view class="page__desc">挂靠到期管理、费用查询</view>
+                </view>
+                <view class="weui-badge">8</view>
+            </view>
+        </navigator>
+        <navigator url="xubao/xubao" class="weui-cell">
+            <view class="weui-flex weui-cell__ft_in-access">
+                <image class="kind-list__img" src="../images/icon_nav_bx.png"></image>
+                <view class="weui-flex__item" style="flex-direction:column;">
+                    <view>保险续保管理</view><view class="page__desc">车辆保险查询、到期管理</view>
+                </view>
+                <view class="weui-badge">8</view>
+            </view>
+        </navigator>
+        <navigator url="chedai/chedai" class="weui-cell">
+            <view class="weui-flex weui-cell__ft_in-access">
+                <image class="kind-list__img" src="../images/icon_nav_cd.png"></image>
+                <view class="weui-flex__item" style="flex-direction:column;">
+                    <view>车贷还款管理</view><view class="page__desc">车辆贷款查询、还贷提醒</view>
+                </view>
+                <view class="weui-badge">8</view>
+            </view>
+        </navigator>
+        <navigator url="xingshi/xingshi" class="weui-cell">
+            <view class="weui-flex weui-cell__ft_in-access">
+                <image class="kind-list__img" src="../images/icon_nav_xs.png"></image>
+                <view class="weui-flex__item" style="flex-direction:column;">
+                    <view>行驶证缴费管理</view><view class="page__desc">行驶证到期管理、费用查询</view>
+                </view>
+                <view class="weui-badge">8</view>
+            </view>
+        </navigator>
+        <navigator url="yingyun/yingyun" class="weui-cell">
+            <view class="weui-flex weui-cell__ft_in-access">
+                <image class="kind-list__img" src="../images/icon_nav_yy.png"></image>
+                <view class="weui-flex__item" style="flex-direction:column;">
+                    <view>营运证缴费管理</view><view class="page__desc">营运证到期管理、费用查询</view>
+                </view>
+                <view class="weui-badge">8</view>
+            </view>
+        </navigator>
+        <navigator url="erwei/erwei" class="weui-cell">
+            <view class="weui-flex weui-cell__ft_in-access">
+                <image class="kind-list__img" src="../images/icon_nav_ew.png"></image>
+                <view class="weui-flex__item" style="flex-direction:column;">
+                    <view>二维缴费管理</view><view class="page__desc">二级维护到期查询及提醒</view>
+                </view>
+                <view class="weui-badge">8</view>
+            </view>
+        </navigator>
+        <navigator url="gps/gps" class="weui-cell">
+            <view class="weui-flex weui-cell__ft_in-access">
+                <image class="kind-list__img" src="../images/icon_nav_gps.png"></image>
+                <view class="weui-flex__item" style="flex-direction:column;">
+                    <view>GPS缴费管理</view><view class="page__desc">GPS到期管理、费用查询</view>
+                </view>
+                <view class="weui-badge">8</view>
+            </view>
+        </navigator>
+        <navigator url="finance/finance" class="weui-cell">
+            <view class="weui-flex weui-cell__ft_in-access">
+                <image class="kind-list__img" src="../images/icon_nav_cw.png"></image>
+                <view class="weui-flex__item" style="flex-direction:column;">
+                    <view>财务管理</view><view class="page__desc">缴费记录查询、账户提现等</view>
+                </view>
+            </view>
+        </navigator>
+    </view>
+        <navigator url="reg_info">填写公司信息</navigator>
+</view>

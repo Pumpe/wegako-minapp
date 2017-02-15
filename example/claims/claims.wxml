@@ -1,0 +1,217 @@
+<!--example/claims/claims.wxml-->
+<view class="page">
+    <view class="fix_top">
+        <view class="weui-flex profile_nav p100">
+            <block wx:for-items="{{tabs}}" wx:key="{{index}}">
+                <view id="{{index}}" class="weui-flex__item weui-nav-slide" bindtap="tabClick">
+                    <view class="profile_nav_item {{activeIndex == index ? 'profile_nav_on' : ''}}">{{item}}</view>
+                </view>
+            </block>
+            <view class="weui-navbar__slider" style="width: {{sliderWidth}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+        </view>
+    </view>
+    <view class="page__bd" style="margin-top:2em;">
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="请输入车主姓名或车牌号搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">请输入车主姓名或车牌号搜索</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+        <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+        </view> 
+        <!--申报中-->
+        <view class="page__bd_spacing" hidden="{{activeIndex != 0}}">
+            <navigator class="kind-list__item l15" url="detail">
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">车主</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <view class="gray">黄蓉</view>
+                    </view>
+                </view>
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">车牌号</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <view class="gray">沪B37778</view>
+                    </view>
+                </view>
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">事故日期</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <view class="gray">2016-04-20</view>
+                    </view>
+                </view>
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">报赔金额</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <view class="red">2000元</view>
+                    </view>
+                </view>
+                <view class="weui-cell">
+                    <navigator url="transfer" class="btn_blue p100" hover-class="btn_blue-hover">转发理赔款</navigator>
+                </view>          
+            </navigator>
+            <navigator class="kind-list__item l15" url="detail">
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">车主</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <view class="gray">黄蓉</view>
+                    </view>
+                </view>
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">车牌号</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <view class="gray">沪B37778</view>
+                    </view>
+                </view>
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">事故日期</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <view class="gray">2016-04-20</view>
+                    </view>
+                </view>
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">报赔金额</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <view class="red">2000元</view>
+                    </view>
+                </view>
+                <view class="weui-cell">
+                    <navigator url="transfer" class="btn_blue p100" hover-class="btn_blue-hover">转发理赔款</navigator>
+                </view>          
+            </navigator>
+        </view>
+        <!--已转款-->
+        <view class="page__bd_spacing" hidden="{{activeIndex != 1}}">
+            <navigator class="kind-list__item l15" url="detail1">
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">车主</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <view class="gray">黄蓉</view>
+                    </view>
+                </view>
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">车牌号</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <view class="gray">沪B37778</view>
+                    </view>
+                </view>
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">事故日期</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <view class="gray">2016-04-20</view>
+                    </view>
+                </view>
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">报赔金额</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <view class="red">2000元</view>
+                    </view>
+                </view>
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">实际赔款</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <view class="red">2000元</view>
+                    </view>
+                </view>  
+            </navigator>
+            <navigator class="kind-list__item l15" url="detail1">
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">车主</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <view class="gray">黄蓉</view>
+                    </view>
+                </view>
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">车牌号</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <view class="gray">沪B37778</view>
+                    </view>
+                </view>
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">事故日期</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <view class="gray">2016-04-20</view>
+                    </view>
+                </view>
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">报赔金额</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <view class="red">2000元</view>
+                    </view>
+                </view>
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">实际赔款</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <view class="red">2000元</view>
+                    </view>
+                </view>  
+            </navigator>
+        </view>  
+    </view>
+</view>

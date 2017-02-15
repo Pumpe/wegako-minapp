@@ -1,0 +1,35 @@
+@import 'style/weui.wxss';
+
+page{
+    background-color: #f1f1f1;
+    font-size: .875rem; 
+    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+.page__hd {
+    padding: 2.5em;
+}
+.page__bd {
+    padding-top: 1em;
+    padding-bottom: 3.6em;
+}
+.page__bd_spacing {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.page__ft{
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.page__title {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.page__desc {
+    margin-top: 5px;
+    color: #999999;
+    text-align: left;
+}

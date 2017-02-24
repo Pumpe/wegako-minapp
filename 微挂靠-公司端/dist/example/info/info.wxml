@@ -1,0 +1,63 @@
+<view class="page">
+    <view class="page__bd page__bd_spacing">
+        <view class="weui-flex"><view class="info_date">今天 19:09</view></view>
+        <view class="weui-flex">
+            <view><image src="../images/icon_nav_xx.png" class="info_dp"></image></view>
+            <view class="info_dia">黄蓉（13888888888）成功加入团队。请在电脑登录卡车之家微挂靠官方网站（gk.360che.com）完善相关挂靠信息。</view>
+        </view>
+
+        <view class="weui-flex"><view class="info_date">2016.11.11 19:09</view></view>
+        <view class="weui-flex">
+            <view><image src="../images/icon_nav_xx.png" class="info_dp"></image></view>
+            <navigator url="../claims/detail" class="info_dia">黄蓉（沪G32850）提交了出险理赔申报，<text class="blue">点击查看</text></navigator>
+        </view>
+
+        <view class="weui-flex"><view class="info_date">2016.11.11 19:09</view></view>
+        <view class="weui-flex">
+            <view><image src="../images/icon_nav_xx.png" class="info_dp"></image></view>
+            <navigator url="../claims/detail" class="info_dia">操作员黄蓉已转账2000元理赔款给郭靖（沪G32850） 2016年09月30日出险事故，<text class="blue">点击查看</text></navigator>
+        </view>
+
+        <view class="weui-flex"><view class="info_date">2016.11.11 19:09</view></view>
+        <view class="weui-flex">
+            <view><image src="../images/icon_nav_xx.png" class="info_dp"></image></view>
+            <navigator url="../trucks/payinfo1" class="info_dia">黄蓉（沪G32850）已缴纳挂靠管理费2000元，<text class="blue">点击查看</text></navigator>
+        </view>
+
+        <view class="weui-flex"><view class="info_date">2016.11.11 19:09</view></view>
+        <view class="weui-flex">
+            <view><image src="../images/icon_nav_xx.png" class="info_dp"></image></view>
+            <navigator url="../trucks/payinfo_xubao2" class="info_dia">黄蓉（沪G32850）已缴纳保险费2000元，等待投保中，<text class="blue">点击查看</text></navigator>
+        </view>
+
+        <view class="weui-flex"><view class="info_date">2016.11.11 19:09</view></view>
+        <view class="weui-flex">
+            <view><image src="../images/icon_nav_xx.png" class="info_dp"></image></view>
+            <navigator url="../trucks/payinfo_xubao3" class="info_dia">操作员欧阳锋已为黄蓉（沪G32850）完成投保，<text class="blue">点击查看</text></navigator>
+        </view>
+
+        <view class="weui-flex"><view class="info_date">2016.11.11 19:09</view></view>
+        <view class="weui-flex">
+            <view><image src="../images/icon_nav_xx.png" class="info_dp"></image></view>
+            <navigator url="../trucks/payinfo_chedai1" class="info_dia">黄蓉（沪G32850）已还车贷款2000元，<text class="blue">点击查看</text></navigator>
+        </view>
+
+        <view class="weui-flex"><view class="info_date">2016.11.11 19:09</view></view>
+        <view class="weui-flex">
+            <view><image src="../images/icon_nav_xx.png" class="info_dp"></image></view>
+            <navigator url="../trucks/payinfo_xingshi1" class="info_dia">黄蓉（沪G32850）已缴纳行驶证代办费2000元，等待审验中，<text class="blue">点击查看</text></navigator>
+        </view>
+
+        <view class="weui-flex"><view class="info_date">2016.11.11 19:09</view></view>
+        <view class="weui-flex">
+            <view><image src="../images/icon_nav_xx.png" class="info_dp"></image></view>
+            <navigator url="../trucks/payinfo_xingshi2" class="info_dia">操作员欧阳锋已为黄蓉（沪G32850）完成行驶证审验，<text class="blue">点击查看</text></navigator>
+        </view>
+
+        <view class="weui-flex"><view class="info_date">2016.11.11 19:09</view></view>
+        <view class="weui-flex">
+            <view><image src="../images/icon_nav_xx.png" class="info_dp"></image></view>
+            <navigator url="../set/power" class="info_dia">黄蓉成功加入，成为管理员，<text class="blue">设置权限</text></navigator>
+        </view>
+    </view>
+</view>

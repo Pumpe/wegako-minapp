@@ -1,0 +1,39 @@
+<!--example/finance/finance.wxml-->
+<view class="page">
+    <view class="fix_top">
+        <navigator class="profile_top" url="withdraw">
+            <view class="finace_top">       
+                <view class="weui-flex">
+                    <view class="weui-flex__item">财户余额（元）</view>
+                    <view>提现</view>
+                </view>
+                <view class="finace_title">32000</view>
+            </view>            
+        </navigator>
+        <view class="profile_nav b12">
+            <navigator url="statistic" class="weui-cell">
+                <view class="weui-flex weui-cell__ft_in-access">
+                    <view class="weui-flex__item">账单统计</view>
+                    <view class="red">本月总收入：80.8万</view>
+                </view>
+            </navigator>
+            <navigator url="list" class="weui-cell">
+                <view class="weui-flex weui-cell__ft_in-access">
+                    <view class="weui-flex__item">账单明细</view>
+                </view>
+            </navigator>
+            <navigator url="withdrawlist" class="weui-cell">
+                <view class="weui-flex weui-cell__ft_in-access">
+                    <view class="weui-flex__item">提现记录</view>
+                </view>
+            </navigator>
+        </view>
+        <view class="weui-post">
+            <navigator url="account" class="weui-cell">
+                <view class="weui-flex weui-cell__ft_in-access">
+                    <view class="weui-flex__item">银行账户设置</view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</view>

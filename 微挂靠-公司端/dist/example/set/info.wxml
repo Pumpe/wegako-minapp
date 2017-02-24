@@ -1,0 +1,62 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-post">
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">公司名称</view>
+                </view>
+                <view class="weui-cell__bd">重庆发财运输公司</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">公司座机</view>
+                </view>
+                <view class="weui-cell__bd">0570-68778888</view>
+            </view>
+            <navigator class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">公司所在地</view>
+                </view>
+                <view class="weui-cell__bd weui-cell__ft_in-access">
+                    <view class="weui-cell_bd">重庆市</view>
+                </view>
+            </navigator>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">详细地址</view>
+                </view>
+                <view class="weui-cell__bd">渝中区北京西路389号</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">客服电话</view>
+                </view>
+                <view class="weui-cell__bd">0570-68778888</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">理赔申报电话</view>
+                </view>
+                <view class="weui-cell__bd">0570-68778888</view>
+            </view>
+        </view>
+        <view class="weui-post t12">
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">联系人</view>
+                </view>
+                <view class="weui-cell__bd">黄蓉</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">联系电话</view>
+                </view>
+                <view class="weui-cell__bd">13888888888</view>
+            </view>
+        </view>
+    </view>
+    <view class="weui-footer_fixed-bottom weui-flex weui-cell">
+        <view class="flx3 pdr10"><button type="primary" bindtap="sure">确定</button></view>
+        <view class="flx1"><button bindtap="ch">修改</button></view>
+    </view>
+</view>

@@ -1,0 +1,103 @@
+<!--example/claims/detail.wxml-->
+<view class="page__bd">
+        <view class="weui-post b12">
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">状态</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <view class="green">已转账</view>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">车主</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <view class="gray">郭靖</view>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">车牌号</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <view class="gray">沪G32850</view>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">事故日期</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <view class="gray">2016-04-25</view>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">报赔金额</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <view class="red">2000元</view>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">驾驶员</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <view class="gray">欧阳锋</view>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">事故地点</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <view class="gray">上海市闸北区天目西路路2888号</view>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">保险公司</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <view class="gray">平安保险公司</view>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">申报时间</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <view class="gray">2016-04-25 14:37</view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-post b12">
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">实际赔款</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <view class="red">2000元</view>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">转账时间</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <view class="gray">2016-04-25 14:37</view>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">操作人</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <view class="gray">黄容</view>
+                </view>
+            </view>
+        </view> 
+</view>

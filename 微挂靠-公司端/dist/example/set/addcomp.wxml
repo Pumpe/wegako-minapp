@@ -1,0 +1,15 @@
+<!--example/set/add.wxml-->
+<view class="page">
+    <view class="weui-post t12">
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <view class="weui-label">挂靠公司</view>
+            </view>
+            <view class="weui-cell__bd"><input placeholder="请输入挂靠公司名称" value="{{inputVal}}" bindinput="getVal"/></view>
+        </view>
+    </view>
+    <view  class="weui-cell weui-flex" style="margin-top:20px;">
+        <view class="sure flx3" style="padding-right:10px;"><button type="primary" bindtap="sure">确定</button></view>
+        <view class="del flx1"><button class="del" bindtap="del">删除</button></view>
+    </view>
+</view>

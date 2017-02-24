@@ -1,0 +1,73 @@
+<!--example/trucks/payinfo_xingshi.wxml-->
+<view class="page">
+    <view class="profile_nav b12">
+        <navigator url="../address/profile" class="weui-cell weui-cell_access">
+            <view class="weui-flex weui-cell__ft_in-access" style="height:2.8em;">
+                <image src="../images/icon_dp.png" class="info_dp"></image>
+                <view class="weui-flex__item" style="flex-direction:column;">
+                    <view>黄蓉（沪D78903）</view><view class="f12 gray">13888888888</view>
+                </view>
+            </view>
+        </navigator>
+    </view>
+    <view class="weui-post">
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <view class="weui-label">缴费类别</view>
+            </view>
+            <view class="weui-cell__bd">
+                <view class="gray">二维代办费</view>
+            </view>
+        </view>
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <view class="weui-label">缴费状态</view>
+            </view>
+            <view class="weui-cell__bd">
+                <view class="red">待缴费（已逾期）</view>
+            </view>
+        </view>
+        <navigator class="weui-cell" url="pay_mod">
+            <view class="weui-cell__hd">
+                <view class="weui-label">本次缴费金额</view>
+            </view>
+            <view class="weui-cell__bd">
+                <view class="red">2000元</view>
+            </view>
+            <view><image src="../images/icon_modify.png" style="margin-right:6px;width:12px; height: 13px;"></image></view>
+        </navigator>
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <view class="weui-label">上次缴费金额</view>
+            </view>
+            <view class="weui-cell__bd">
+                <view class="gray">2000元</view>
+            </view>
+        </view>
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <view class="weui-label">二维到期日</view>
+            </view>
+            <view class="weui-cell__bd">
+                <view class="gray">2016-03-18</view>
+            </view>
+        </view>
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <view class="weui-label">最迟缴费日</view>
+            </view>
+            <view class="weui-cell__bd">
+                <view class="gray">2016-03-18</view>
+            </view>
+        </view>
+    </view>
+    <view class="page__bd page__bd_spacing">
+        <button class="weui-btn btn_def blue" type="default">车主已通过其它途径缴费</button>
+        <navigator class="b12 c gray t12" url="paylist">查看本车缴费记录</navigator>
+    </view>
+    <view class="weui-footer_fixed-bottom weui-footer">
+        <view class="weui-cell_access">
+            <image src="../images/icon_phone.png" style="margin-right:8px;vertical-align: middle;width:20px; height: 20px;"></image>联系TA
+        </view>
+    </view>
+</view>

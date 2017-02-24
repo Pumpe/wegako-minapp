@@ -1,0 +1,248 @@
+<!--example/finance/detail.wxml-->
+<view class="page">
+    <view class="page__bd">
+    <!--挂靠管理费、GPS管理费-->
+        <view class="weui-post c">
+            <view class="weui-cell">
+                <image src="../images/icon_nav_gk.png" class="info_dp v_m"></image>挂靠管理费（GPS管理费）
+            </view>
+            <view class="weui-cell">
+                <view class="p100 t12">
+                    <view class="amount-input">+3200元</view>
+                    <view class="green b12">缴费成功</view>
+                    <navigator url="../trucks/archives" class="weui-flex t12">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">车牌号</view>
+                        </view>
+                        <view class="weui-cell__bd weui-cell__ft_in-access">
+                            <view class="gray l">沪D78903</view>
+                        </view>
+                    </navigator>
+                    <navigator url="../address/profile" class="weui-flex">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">车主</view>
+                        </view>
+                        <view class="weui-cell__bd weui-cell__ft_in-access">
+                            <view class="gray l">郭靖</view>
+                        </view>
+                    </navigator>
+                    <view class="weui-flex">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">有效期</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray l">2016-10-1 至 2017-9-30</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-cell gray">
+                缴费时间：2016-12-30 09:25
+            </view>
+        </view>
+        <!--车辆保费
+        <view class="weui-post c">
+            <view class="weui-cell">
+                <image src="../images/icon_nav_bx.png" class="info_dp v_m"></image>车辆保费
+            </view>
+            <view class="weui-cell">
+                <view class="p100 t12">
+                    <view class="amount-input">+3200元</view>
+                    <view class="green b12">已缴费，待投保（完成投保）</view>
+                    <navigator url="../trucks/archives" class="weui-flex t12">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">车牌号</view>
+                        </view>
+                        <view class="weui-cell__bd weui-cell__ft_in-access">
+                            <view class="gray l">沪D78903</view>
+                        </view>
+                    </navigator>
+                    <navigator url="../address/profile" class="weui-flex">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">车主</view>
+                        </view>
+                        <view class="weui-cell__bd weui-cell__ft_in-access">
+                            <view class="gray l">郭靖</view>
+                        </view>
+                    </navigator>
+                    <view class="weui-flex">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">保险公司</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray l">平安保险公司</view>
+                        </view>
+                    </view>
+                    <view class="weui-flex">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">投保险种</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray l">交强险、车损险、第三者</view>
+                        </view>
+                    </view>
+                    <view class="weui-flex">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">保险到期日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray l">2016-10-1</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-cell gray">
+                缴费时间：2016-12-30 09:25
+            </view>
+        </view>       
+        <!--车辆贷款
+        <view class="weui-post c">
+            <view class="weui-cell">
+                <image src="../images/icon_nav_cd.png" class="info_dp v_m"></image>车辆贷款
+            </view>
+            <view class="weui-cell">
+                <view class="p100 t12">
+                    <view class="amount-input">+3200元</view>
+                    <view class="green b12">缴费成功</view>
+                    <navigator url="../trucks/archives" class="weui-flex t12">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">车牌号</view>
+                        </view>
+                        <view class="weui-cell__bd weui-cell__ft_in-access">
+                            <view class="gray l">沪D78903</view>
+                        </view>
+                    </navigator>
+                    <navigator url="../address/profile" class="weui-flex">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">车主</view>
+                        </view>
+                        <view class="weui-cell__bd weui-cell__ft_in-access">
+                            <view class="gray l">郭靖</view>
+                        </view>
+                    </navigator>
+                    <view class="weui-flex">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">本次还款期</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray l">第10期</view>
+                        </view>
+                    </view>
+                    <view class="weui-flex">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">还款总期数</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray l">18期</view>
+                        </view>
+                    </view>
+                    <view class="weui-flex">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">贷款总额</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray l">300,000元</view>
+                        </view>
+                    </view>
+                    <view class="weui-flex">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">还款频率</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray l">月还</view>
+                        </view>
+                    </view>
+                    <view class="weui-flex">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">还款方式</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray l">等额本息</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-cell gray">
+                缴费时间：2016-12-30 09:25
+            </view>
+        </view>
+        <!--行驶证、营运证、二维代办费
+        <view class="weui-post c">
+            <view class="weui-cell">
+                <image src="../images/icon_nav_xs.png" class="info_dp v_m"></image>行驶证（营运证、二维）代办费
+            </view>
+            <view class="weui-cell">
+                <view class="p100 t12">
+                    <view class="amount-input">+3200元</view>
+                    <view class="green b12">已缴费，待审验（完成审验）</view>
+                    <navigator url="../trucks/archives" class="weui-flex t12">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">车牌号</view>
+                        </view>
+                        <view class="weui-cell__bd weui-cell__ft_in-access">
+                            <view class="gray l">沪D78903</view>
+                        </view>
+                    </navigator>
+                    <navigator url="../address/profile" class="weui-flex">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">车主</view>
+                        </view>
+                        <view class="weui-cell__bd weui-cell__ft_in-access">
+                            <view class="gray l">郭靖</view>
+                        </view>
+                    </navigator>
+                    <view class="weui-flex">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">行驶证（营运证、二维）到期日</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray l">2016-10-1</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-cell gray">
+                缴费时间：2016-12-30 09:25
+            </view>
+        </view>
+    <!--理赔款
+        <view class="weui-post c">
+            <view class="weui-cell">
+                <image src="../images/icon_nav_cx.png" class="info_dp v_m"></image>理赔款
+            </view>
+            <view class="weui-cell">
+                <view class="p100 t12">
+                    <view class="amount-input">-3200元</view>
+                    <view class="green b12">转账成功</view>
+                    <navigator url="../trucks/archives" class="weui-flex t12">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">车牌号</view>
+                        </view>
+                        <view class="weui-cell__bd weui-cell__ft_in-access">
+                            <view class="gray l">沪D78903</view>
+                        </view>
+                    </navigator>
+                    <navigator url="../address/profile" class="weui-flex">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">车主</view>
+                        </view>
+                        <view class="weui-cell__bd weui-cell__ft_in-access">
+                            <view class="gray l">郭靖</view>
+                        </view>
+                    </navigator>
+                    <view class="weui-flex">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label l">事故日期</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="gray l">2016-10-1</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-cell gray">
+                缴费时间：2016-12-30 09:25
+            </view>
+        </view>-->
+    </view>
+</view>

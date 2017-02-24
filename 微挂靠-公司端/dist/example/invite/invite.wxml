@@ -1,0 +1,7 @@
+<view class="page">
+    <view class="invite_flex">
+        <image src="../images/icon_code.png" class="invite_code"></image>
+        <view class="page__bd_spacing" style="padding-top:4.8em;" bindtap="share"><button class="weui-btn btn_def blue" type="default">分享二维码邀请车主加入</button></view>
+    </view>
+    <view class="invite_tape">微信扫一扫加入该公司</view>
+</view>

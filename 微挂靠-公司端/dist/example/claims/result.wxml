@@ -1,0 +1,22 @@
+<!--example/claims/result.wxml-->
+<view class="page">
+    <view class="profile_nav c">
+        <view class="weui-cell">
+            <view class="p100 t12 b12">
+                <view><icon type="success" size="60"></icon><!--失败<icon type="warn" size="60"></icon>--></view>
+                <view class="green h1">转账成功</view>
+                <!--失败<view class="red h1">转账失败</view>-->
+                <view class="amount-input t12">3200元</view>
+            </view>
+        </view>
+        <navigator class="weui-cell" url="../finance/list">
+            <view class="weui-flex weui-cell__ft_in-access">                    
+                <view class="weui-flex__item l">
+                    <image src="../images/icon_nav_cx.png" class="info_dp v_m"></image>转发实际理赔款
+                </view>
+                <view class="gray" style="padding-top:.6em;">账单明细</view>
+            </view>
+        </navigator>
+    </view>
+    <navigator class="page__bd page__bd_spacing" url="transfer"><button class="weui-btn" type="primary">完成<!--返回--></button></navigator>
+</view>

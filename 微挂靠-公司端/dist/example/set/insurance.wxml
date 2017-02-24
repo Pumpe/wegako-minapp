@@ -1,0 +1,24 @@
+<!--example/set/insurance.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-post">
+            <view class="weui-cell" bindtap="open">
+                <view class="weui-flex__item col">
+                    <view>平安保险公司</view>
+                    <view class="gray">4008-219-026</view>
+                </view>
+                <view><image src="../images/more.png" class="more"></image></view>
+            </view>
+            <view class="weui-cell" bindtap="open">
+                <view class="weui-flex__item col">
+                    <view>太平洋保险公司</view>
+                    <view class="gray">95500</view>
+                </view>
+                <view><image src="../images/more.png" class="more"></image></view>
+            </view>
+        </view>
+    </view>
+    <view class="weui-footer_fixed-bottom weui-footer">
+        <navigator url="addinsur" class="weui-cell_access">+添加保险公司</navigator>
+    </view>
+</view>

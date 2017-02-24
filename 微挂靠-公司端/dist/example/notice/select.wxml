@@ -1,0 +1,59 @@
+<!--example/notice/select.wxml-->
+<view class="page">
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="请输入车主姓名或车牌号搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindblur="inputBlur"/>
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">请输入车主姓名或车牌号搜索</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+        <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}" style="margin:0;transform:translate3d(0,0,0);-webkit-transform:translate3d(0,0,0)">
+            <view class="weui-cell"  wx:for="{{minKeys}}" wx:for-item="item">
+                <view class="weui-cell__bd" >
+                    <view id="{{item.letter}}" catchtap="sortTap">{{item.name}}（{{item.num}}）</view>
+                </view>
+            </view>
+        </view>
+       <scroll-view scroll-into-view="{{toView}}" scroll-y="true" style="height:{{height-110}}px">
+
+            <view wx:for="{{textData}}" wx:for-index="index" wx:for-item="item">
+                <view id="{{item.tag}}">
+                    <view class="l15">{{item.tag}}</view>
+                    <view class="weui-post" wx:for="{{item.textArray}}" wx:for-item="el" wx:for-index="i">
+                        <view url="profile" class="weui-cell" catchtap="bindCheckbox" data-index="{{index}}" data-i="{{i}}">
+                            <view class="weui-flex__item"><image src="{{el.avator}}" class="info_dp v_m"></image>{{el.name}}（{{el.num}}）</view>
+                            <view class="weui-check__hd_in-checkbox">
+                                <icon class="weui-icon-checkbox_success" type="success" wx:if="{{el.select}}" size="23"/>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+        </scroll-view>
+    <view class="endmenu" cursor-spacing="0">
+        <view class="l l15 r15" catchtap="selectAll">
+            <icon class="weui-icon-checkbox_circle" type="{{hidden?'success':'circle'}}" size="23"></icon> 全选
+        </view>
+        <navigator url="./post?selected={{minKeys}}">
+            <view class="weui-flex__item">
+                <button class="btn_blue" hover-class="btn_blue-hover">确定（{{countTotal}}/{{length}}人）</button>
+            </view>
+        </navigator>
+    </view>
+</view>
+    
+<view class="address_nav">
+    <view class="slide-item" catchtap="sortTap" wx:for="{{chartArr}}" id="{{item}}">
+        <text>{{item}}</text>
+    </view>
+</view>

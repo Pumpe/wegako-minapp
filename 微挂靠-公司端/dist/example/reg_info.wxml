@@ -1,0 +1,70 @@
+<view class="page">
+    <view class="weui-toptips">本产品可免费试用3个月！</view>
+    <view class="page__bd">
+        <view class="weui-post">
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">公司名称</view>
+                </view>
+                <view class="weui-cell__bd"><input placeholder="请输入公司名称" bindinput="getVal0" value="{{userData.company}}"/></view>
+                <view class="more" wx:if="{{!userData.company}}"><icon type="warn" size="20"></icon></view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">公司座机</view>
+                </view>
+                <view class="weui-cell__bd"><input placeholder="请输入公司的电话" bindinput="getVal1" value="{{userData.tel?userData.tel:''}}"/></view>
+                <view class="more" wx:if="{{!userData.tel}}"><icon type="warn" size="20"></icon></view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">公司所在地</view>
+                </view>
+                <view class="weui-cell__bd weui-cell__ft_in-access">
+                    <view class="weui-cell_bd" ><input placeholder="请选择公司所在地" bindinput="getAdd" value="{{userData.address?userData.address:''}}"/></view>
+                </view>
+                <view class="more" wx:if="{{!userData.address}}"><icon type="warn" size="20"></icon></view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">详细地址</view>
+                </view>
+                <view class="weui-cell__bd"><input placeholder="请输入公司的详细地址" bindinput="getVal2" value="{{userData.relAddress?userData.relAddress:''}}"/></view>
+                <view class="more" wx:if="{{!userData.relAddress}}"><icon type="warn" size="20"></icon></view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">客服电话</view>
+                </view>
+                <view class="weui-cell__bd"><input placeholder="请输入客服电话" bindinput="getVal3" value="{{userData.serviceTel?userData.serviceTel:''}}"/></view>
+                <view class="more" wx:if="{{!userData.serviceTel}}"><icon type="warn" size="20"></icon></view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">理赔申报电话</view>
+                </view>
+                <view class="weui-cell__bd"><input placeholder="请输入理赔电话" bindinput="getVal4" value="{{userData.claimTel?userData.claimTel:''}}"/></view>
+                <view class="more" wx:if="{{!userData.claimTel}}"><icon type="warn" size="20"></icon></view>
+            </view>
+        </view>
+        <view class="weui-post t12">
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">联系人</view>
+                </view>
+                <view class="weui-cell__bd"><input placeholder="请输入联系人" bindinput="getVal5" value="{{userData.name?userData.name:''}}"/></view>
+                <view class="more" wx:if="{{!userData.name}}"><icon type="warn" size="20"></icon></view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">联系电话</view>
+                </view>
+                <view class="weui-cell__bd"><input placeholder="请输入联系人的手机号" bindinput="getVal6" value="{{userData.phone?userData.phone:''}}"/></view>
+                <view class="more" wx:if="{{!userData.phone}}"><icon type="warn" size="20"></icon></view>
+            </view>
+        </view>
+    </view>
+    <view class="weui-footer_fixed-bottom weui-footer">
+        <view bindtap="updata" class="weui-cell_access">立即试用</view>
+    </view>
+</view>

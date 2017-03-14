@@ -1,0 +1,58 @@
+<!--example/finance/statistic.wxml-->
+<view class="page">
+    <view class="fullbg {{isfull ?'fullopacity':''}}" bindtap="hidebg"></view>
+    <view class="fix_top">
+        <view class="page__bd_spacing profile_nav" style="position:relative;z-index:1;" bindtap="listpay" data-nav="1">
+            <view class="weui-flex p100" style="line-height:3em;">
+                <view class="weui-flex__item">本月</view>
+                <view class="weui-flex gray">筛选<view class="weui-nav-select" style="padding-right:20px;"></view></view>
+            </view>
+        </view>
+        <view class="weui-flex__item gray_bg {{payopen ? 'slidown' : 'slidup'}}">
+            <view class="weui-cell">本年</view>
+            <view class="weui-cell">本季度</view>
+            <view class="weui-cell">本月</view>
+            <view class="weui-cell">6月</view>
+            <view class="weui-cell">5月</view>
+            <view class="weui-cell">4月</view>
+            <view class="weui-cell">3月</view>
+            <view class="weui-cell">1月</view>
+            <view class="weui-cell">2015年</view>
+        </view>
+    </view>
+    <view class="weui-post b12" style="margin-top:3.8em;">
+        <view class="weui-cell">
+                <view class="weui-flex__item">缴费收入情况</view>
+                <view class="gray"><image src="../images/icon_tranfer.png" style="margin-right:8px;vertical-align: middle;width:16px; height:16px;"></image>切换为转账</view>
+        </view>
+        <!--折线图-->
+        <canvas class="graphCanvas1" canvas-id="lineGraph"></canvas>
+        
+    </view>
+    <view class="weui-post b12">
+        <view class="weui-cell">
+                <view class="weui-flex__item h1">本月总收入</view>
+                <view class="h1 red">+808,000.00</view>
+        </view>
+        <view class="weui-cell">
+                <view class="weui-flex__item">逾期缴费</view>
+                <view>+8,000.00</view>
+        </view>
+        <!--饼状图-->
+        <canvas class="graphCanvas2" canvas-id="pieGraph"></canvas>
+        <view class="weui-cell">
+                <view class="weui-flex__item">本月欠缴费</view>
+                <view>808,000.00</view>
+        </view>
+    </view>
+    <view class="weui-post">
+        <view class="weui-cell">
+                <view class="weui-flex__item">本月总转账</view>
+                <view>-808,000.00</view>
+        </view>
+        <view class="weui-cell">
+                <view class="weui-flex__item">本月总提现</view>
+                <view>-808,000.00</view>
+        </view>
+    </view>
+</view>

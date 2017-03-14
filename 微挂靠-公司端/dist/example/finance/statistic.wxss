@@ -1,0 +1,8 @@
+.graphCanvas1{
+    width:100%;
+    height:220px;
+}
+.graphCanvas2{
+    width:100%;
+    height:350px;
+}

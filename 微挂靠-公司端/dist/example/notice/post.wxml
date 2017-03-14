@@ -1,0 +1,79 @@
+<view class="page">
+  <scroll-view scroll-y="true" style="height:{{wheight-51}}px">
+    <view class="weui-post b12">
+      <navigator url="select" class="weui-cell">
+        <view class="weui-cell__hd">
+          <view class="weui-label">发送范围</view>
+        </view>
+        <view class="weui-cell__bd">
+          <view class="weui-select">{{}}</view>
+        </view>
+      </navigator>
+    </view>
+    <view class="weui-post weui-post_after-title">
+      <view class="weui-cell">
+        <view class="input_tit">
+          <input placeholder="请输入公告标题" style="padding-left:8px"/>
+        </view>
+      </view>
+      <view class="weui-cell" wx:if="{{titleData.length==0}}">
+            <view class="weui-cell addMore">
+                
+                <view class="addTit addBtn" bindtap="addText" style="margin-right:30px;">
+                    <image class="img" src="../images/file.png"></image>
+                </view>
+                <view class="addImg addBtn">
+                    <image class="img" bindtap="addImg" src="../images/photo.png"></image>
+                </view>
+                
+            </view>
+      </view>
+      <view class="titleWrapper" wx:if="{{titleData.length>0}}">
+        <block wx:for="{{titleData}}" wx:key="{{index}}">
+          <view class="titItem">
+            <view class="delItem"><icon catchtap="del" type="cancel" size="20" color="red" data-index="{{index}}"/></view>
+            <view class="weui-uploader__img"><image class="weui-uploader__img" src="{{item.src?item.src:'../images/pic_160.png'}}"></image></view>
+            <view class="textW" bindtap="chTxt" data-index="{{index}}">
+                <view wx:if="{{item.text.length==0}}" style="color:#999999">点击添加或修改内容</view>
+                <view wx:else class="txt">{{item.text}}</view>
+            </view>
+          </view>
+          
+          <view class="set" style="height:{{!item.click?'20px':'auto'}}">
+            <view class="icon" bindtap="click" data-index="{{index}}">+</view>
+            <view class="setType">
+              <view class="imgW" data-index="{{index}}" bindtap="addText" style="border-right:1rpx solid #e3e3e3">
+                  <image src="../images/files.png" class="img"></image>
+              </view>
+              <view class="imgW" data-index="{{index}}" bindtap="addImg">
+                <image src="../images/photos.png" class="img"></image>
+              </view>
+            </view>
+          </view>
+
+        </block> 
+      </view>
+    </view>
+  </scroll-view>
+  <view class="weui-footer_fixed-bottom weui-footer">
+    <navigator url="" class="weui-cell_access">
+      <view>立即发布</view>
+    </navigator>
+  </view>
+  <view class="textArea" wx:if="{{textShow}}">
+    <view class="page">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">
+                <textarea class="weui-textarea" auto-focus="true" bindinput="getText" maxlength="-1" value="{{titVal}}" placeholder="请输入公告内容" />
+            </view>
+        </view>
+
+        <view class="weui-footer_fixed-bottom weui-footer">
+            <view class="weui-cell_access">
+                <view class="sureBack" bindtap="saveVal">确定</view>
+            </view>
+        </view>
+
+    </view>
+  </view>
+</view>
